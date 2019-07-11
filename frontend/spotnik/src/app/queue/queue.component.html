@@ -1,0 +1,19 @@
+<div class="title-with-spinner">
+	<h4>Coming Up</h4> 
+	<div class="spinner">
+		<div class="countdown-to-reload" *ngIf="!isLoadingTracks">{{countdownToReload}}</div>
+		<div *ngIf="isLoadingTracks" class="spinner-border ml-auto spinner-border-sm" role="status" aria-hidden="true"></div>
+	</div>
+</div>
+
+<ul class="list-group">
+	<li class="list-group-item" *ngFor="let track of tracks">
+		<div class="track-info">
+			<h5>{{track.trackName}}</h5>
+			<div><b>{{track.artists}}</b> on <i>{{track.albumName}}</i></div>
+		</div>
+		<div class="track-cover">
+			<img src="{{track.coverUrl}}" class="rounded" height="64" width="64"/>
+		</div>
+	</li>
+</ul>
