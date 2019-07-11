@@ -1,2 +1,2 @@
-ng build --prod --base-href "https://kloppodurockstar.github.io/Spotnik/"
-npx angular-cli-ghpages --dir=dist/spotnik
+ng build --prod --output-path docs --base-href /Spotnik/
+cp -r docs ../../docs
