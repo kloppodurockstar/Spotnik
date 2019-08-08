@@ -2,7 +2,7 @@
 
 1) Download and install [Docker Desktop](https://hub.docker.com/).
 2) Download the [docker-compose.yaml, Spotnik-Backend and Spotnik-Frontend](https://drive.google.com/open?id=1D7nBAQry2kMSwdGLxTV27EZoYd3NNPEh) files, and put all of them together in the same directory.
-3) Download [ngrok](https://ngrok.com/) in order to allow outside connections to your computer. Update the ngrok configuration (located at `$HOME/.ngrok2/ngrok.yml`) by adding the following configuration:
+3) Download [ngrok](https://ngrok.com/) in order to allow outside connections to your computer. Update the ngrok configuration (located at `$HOME/.ngrok2/ngrok.yml`) by adding the following:
 ```
 tunnels:
 	spotnik-backend:
