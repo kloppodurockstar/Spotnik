@@ -16,8 +16,8 @@ tunnels:
 5) Create a [Spotify integration](https://developer.spotify.com/dashboard/login), and update its redirect uri on by appending `/authorize` to the address of the tunnel redirecting to localhost:8080. It should look like this: `https://f430ef88.ngrok.io/authorize`. Take this opportunity to write down the Client Id and Client Secret of your integration.
 6) Update the docker-compose.yaml file environment variables:
 	- Update `SPOTIFY_APP_ID` and `SPOTIFY_APP_SECRET` with the Client Id and the Client Secret from the previous step.
-  - Update `REDIRECT_HOST` with the address of the tunnel redirecting to `localhost:8080` (don't add `/authorize` here).
-  - Update `ADMIN_USERNAME` and `ADMIN_PASSWORD` to whatever you'd like - just remember what you put in there.
+ 	- Update `REDIRECT_HOST` with the address of the tunnel redirecting to `localhost:8080` (don't add `/authorize` here).
+	- Update `ADMIN_USERNAME` and `ADMIN_PASSWORD` to whatever you'd like - just remember what you put in there.
 7) Open a terminal where the spotnik-backend.tar and spotnik-frontend.tar files are located, and run `docker load --input spotnik-backend.tar` and `docker load --input spotnik-frontend.tar`.
 8) Run `docker-compose up`. Spotnik is starting! 
 9) Wait for Spotnik to finish loading (it will be ready for use when you see `Unable to send GetActiveTrack request, no access token` in the logs).
